@@ -35,6 +35,7 @@ export default function NewHomes(props) {
       {(item, index) => (
         <HomeCard
           home={item}
+          margin="10px 10px 10px 10px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></HomeCard>
