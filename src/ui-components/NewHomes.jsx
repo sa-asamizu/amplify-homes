@@ -6,7 +6,6 @@
 
 /* eslint-disable */
 import React from "react";
-import { SortDirection } from "@aws-amplify/datastore";
 import { Home } from "../models";
 import {
   getOverrideProps,
@@ -16,13 +15,9 @@ import HomeCard from "./HomeCard";
 import { Collection } from "@aws-amplify/ui-react";
 export default function NewHomes(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsPagination = {
-    sort: (s) => s.createdAt(SortDirection.DESCENDING),
-  };
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Home,
-    pagination: itemsPagination,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
@@ -40,9 +35,6 @@ export default function NewHomes(props) {
       {(item, index) => (
         <HomeCard
           home={item}
-          height="auto"
-          width="auto"
-          margin="10px 10px 10px 10px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></HomeCard>
