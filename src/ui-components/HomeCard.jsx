@@ -11,7 +11,7 @@ import {
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text, View } from "@aws-amplify/ui-react";
-export default function Homecard(props) {
+export default function HomeCard(props) {
   const { home, overrides, ...rest } = props;
   const rectangleOneOneSixFourOnClick = useNavigateAction({
     type: "url",
@@ -33,7 +33,7 @@ export default function Homecard(props) {
       padding="23px 23px 23px 23px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Homecard")}
+      {...getOverrideProps(overrides, "HomeCard")}
     >
       <View
         width="160px"
