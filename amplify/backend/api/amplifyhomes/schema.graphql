@@ -3,4 +3,22 @@ type Home @model @auth(rules: [{allow: public}]) {
   address: String
   image_url: String
   price: Float
+  status: StatusEnum
+  location: LocationEnum
 }
+
+enum StatusEnum {
+  ONLINE
+  UNRESPONSIVE
+  HOLIDAY
+}
+
+enum LocationEnum {
+  MYSEAT
+  MEETING
+  RECEPTION
+  TELEWORK
+  ANOTHER
+  HOME
+}
+ 

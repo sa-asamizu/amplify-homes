@@ -6,68 +6,145 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Image, Text, View } from "@aws-amplify/ui-react";
-export default function HomeCard(props) {
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
+import { Flex, Text, View } from "@aws-amplify/ui-react";
+export default function Homecard(props) {
   const { home, overrides, ...rest } = props;
+  const rectangleOneOneSixFourOnClick = useNavigateAction({
+    type: "url",
+    url: home?.status,
+  });
+  const tELEWORKOnClick = useNavigateAction({
+    type: "url",
+    url: home?.location,
+  });
   return (
-    <View
+    <Flex
+      gap="24px"
+      direction="column"
       width="320px"
-      height="253px"
-      overflow="hidden"
+      alignItems="center"
       position="relative"
-      borderRadius="20px"
-      padding="0px 0px 0px 0px"
+      border="1px SOLID rgba(0,0,0,1)"
+      borderRadius="10px"
+      padding="23px 23px 23px 23px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "HomeCard")}
+      {...getOverrideProps(overrides, "Homecard")}
     >
-      <Image
-        width="320px"
-        height="160px"
-        position="absolute"
-        top="0px"
-        left="0px"
+      <View
+        width="160px"
+        height="43px"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
-        src={home?.image_url}
-        {...getOverrideProps(overrides, "image")}
-      ></Image>
-      <Text
-        fontFamily="Inter"
-        fontSize="16px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="24px"
-        textAlign="left"
-        display="flex"
+        {...getOverrideProps(overrides, "Frame 418")}
+      >
+        <View
+          width="160px"
+          height="43px"
+          position="absolute"
+          top="0px"
+          left="0px"
+          borderRadius="10px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(45,103,160,1)"
+          onClick={() => {
+            rectangleOneOneSixFourOnClick();
+          }}
+          {...getOverrideProps(overrides, "Rectangle 1164")}
+        ></View>
+        <Flex
+          gap="16px"
+          position="absolute"
+          top="10px"
+          left="34px"
+          direction="column"
+          alignItems="center"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "status")}
+        >
+          <Text
+            fontFamily="Inter"
+            fontSize="24px"
+            fontWeight="700"
+            color="rgba(255,255,255,1)"
+            lineHeight="24px"
+            textAlign="center"
+            display="flex"
+            direction="column"
+            justifyContent="flex-start"
+            letterSpacing="0.09px"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="ONLINE"
+            {...getOverrideProps(overrides, "ONLINE")}
+          ></Text>
+        </Flex>
+      </View>
+      <Flex
+        gap="8px"
         direction="column"
-        justifyContent="flex-start"
-        position="absolute"
-        top="174px"
-        left="18px"
+        alignItems="center"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={home?.address}
-        {...getOverrideProps(overrides, "Title")}
-      ></Text>
-      <Text
-        fontFamily="Inter"
-        fontSize="16px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="24px"
-        textAlign="left"
-        display="flex"
+        {...getOverrideProps(overrides, "Name")}
+      >
+        <Text
+          fontFamily="Inter"
+          fontSize="24px"
+          fontWeight="700"
+          color="rgba(13,26,38,1)"
+          lineHeight="25px"
+          textAlign="center"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={home?.address}
+          {...getOverrideProps(overrides, "Melinda Marcus")}
+        ></Text>
+      </Flex>
+      <Flex
+        gap="16px"
         direction="column"
-        justifyContent="flex-start"
-        position="absolute"
-        top="210px"
-        left="23px"
+        alignItems="center"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={`${"Price:$"}${home?.price}${"/nigtht"}`}
-        {...getOverrideProps(overrides, "Description")}
-      ></Text>
-    </View>
+        {...getOverrideProps(overrides, "location")}
+      >
+        <Text
+          fontFamily="Inter"
+          fontSize="20px"
+          fontWeight="400"
+          color="rgba(35,47,62,1)"
+          lineHeight="24px"
+          textAlign="center"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          letterSpacing="0.05px"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="TELEWORK"
+          onClick={() => {
+            tELEWORKOnClick();
+          }}
+          {...getOverrideProps(overrides, "TELEWORK")}
+        ></Text>
+      </Flex>
+    </Flex>
   );
 }

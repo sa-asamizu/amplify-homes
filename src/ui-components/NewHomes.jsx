@@ -11,7 +11,7 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import HomeCard from "./HomeCard";
+import Homecard from "./Homecard";
 import { Collection } from "@aws-amplify/ui-react";
 export default function NewHomes(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
@@ -33,12 +33,11 @@ export default function NewHomes(props) {
       {...getOverrideProps(overrides, "NewHomes")}
     >
       {(item, index) => (
-        <HomeCard
+        <Homecard
           home={item}
-          margin="10px 10px 10px 10px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></HomeCard>
+        ></Homecard>
       )}
     </Collection>
   );

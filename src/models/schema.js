@@ -31,6 +31,24 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "status": {
+                    "name": "status",
+                    "isArray": false,
+                    "type": {
+                        "enum": "StatusEnum"
+                    },
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "location": {
+                    "name": "location",
+                    "isArray": false,
+                    "type": {
+                        "enum": "LocationEnum"
+                    },
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -74,7 +92,27 @@ export const schema = {
             ]
         }
     },
-    "enums": {},
+    "enums": {
+        "StatusEnum": {
+            "name": "StatusEnum",
+            "values": [
+                "ONLINE",
+                "UNRESPONSIVE",
+                "HOLIDAY"
+            ]
+        },
+        "LocationEnum": {
+            "name": "LocationEnum",
+            "values": [
+                "MYSEAT",
+                "MEETING",
+                "RECEPTION",
+                "TELEWORK",
+                "ANOTHER",
+                "HOME"
+            ]
+        }
+    },
     "nonModels": {},
-    "version": "abb6f204998ef8932ab6c6fbd372dbd2"
+    "version": "f784f881befb688582af71b234329852"
 };

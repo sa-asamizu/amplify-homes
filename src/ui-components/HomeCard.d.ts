@@ -5,12 +5,12 @@
  **************************************************************************/
 
 import React from "react";
-import { Home } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
-export declare type HomeCardProps = React.PropsWithChildren<Partial<ViewProps> & {
+import { Home } from "../models";
+import { FlexProps } from "@aws-amplify/ui-react";
+export declare type HomecardProps = React.PropsWithChildren<Partial<FlexProps> & {
     home?: Home;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function HomeCard(props: HomeCardProps): React.ReactElement;
+export default function Homecard(props: HomecardProps): React.ReactElement;

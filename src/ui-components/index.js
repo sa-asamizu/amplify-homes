@@ -5,21 +5,22 @@
  **************************************************************************/
 
 export { default as ProductCard } from "./ProductCard";
-export { default as ActionCard } from "./ActionCard";
 export { default as SocialPost } from "./SocialPost";
 export { default as CommentCard } from "./CommentCard";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as ItemCard } from "./ItemCard";
 export { default as MarketingPricing } from "./MarketingPricing";
+export { default as NewHomes } from "./NewHomes";
 export { default as HeroLayout3 } from "./HeroLayout3";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as Features2x3 } from "./Features2x3";
-export { default as NewHomes } from "./NewHomes";
+export { default as Homecard } from "./Homecard";
 export { default as Features2x2 } from "./Features2x2";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as ContactUs } from "./ContactUs";
 export { default as NavBar } from "./NavBar";
+export { default as ActionCard } from "./ActionCard";
 export { default as TallCard } from "./TallCard";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
 export { default as ProductDetail } from "./ProductDetail";
@@ -30,7 +31,6 @@ export { default as SideBar } from "./SideBar";
 export { default as EditProfile } from "./EditProfile";
 export { default as MyIcon } from "./MyIcon";
 export { default as Features4x1 } from "./Features4x1";
-export { default as HomeCard } from "./HomeCard";
 export { default as HeroLayout2 } from "./HeroLayout2";
 export { default as FAQItem } from "./FAQItem";
 export { default as HeroLayout4 } from "./HeroLayout4";
